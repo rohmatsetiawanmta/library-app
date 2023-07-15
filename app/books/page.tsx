@@ -18,7 +18,7 @@ export default async function BookList() {
   return (
     <div className='p-10 bg-indigo-200 text-indigo-900'>
       <table className='table w-full'>
-        <thead>
+        <thead className='text-lg'>
           <tr>
             <td>No</td>
             <td>Id</td>
@@ -27,7 +27,7 @@ export default async function BookList() {
             <td>Actions</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='text-lg'>
           {books.map((book, index) => (
             <tr key={book.id}>
               <td>{index + 1}</td>

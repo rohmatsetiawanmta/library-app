@@ -13,7 +13,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='bg-indigo-900 min-h-screen antialiased tracking-tight'>{children}</div>
+        <div className='bg-indigo-900 min-h-screen antialiased tracking-tight'>
+          <div className='mx-[10vw]'>
+            <header className='flex justify-between'>
+              <a href='/' className='py-10 text-indigo-100 text-3xl font-semibold'>
+                Library App 📖
+              </a>
+              <div className='py-10 text-indigo-100 text-lg'>
+                <button className='mx-4 border px-4 py-2 rounded-xl duration-300 font-semibold hover:bg-indigo-100 hover:text-indigo-900'>
+                  Login
+                </button>
+                <button className='border px-4 py-2 rounded-xl duration-300 bg-indigo-100 text-indigo-900 font-semibold hover:bg-indigo-900 hover:text-indigo-100'>
+                  Sign Up
+                </button>
+              </div>
+            </header>
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

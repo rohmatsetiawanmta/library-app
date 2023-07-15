@@ -1,3 +1,6 @@
+export const metadata = {
+  title: 'Book List',
+};
 type Book = {
   id: number;
   title: string;

@@ -1,3 +1,6 @@
+export const metadata = {
+  title: 'Book Details',
+};
 export default function BookDetail({ params }: { params: { bookId: number } }) {
   return (
     <>

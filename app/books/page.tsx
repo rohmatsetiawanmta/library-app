@@ -1,7 +1,41 @@
-export default function BookList() {
+type Book = {
+  id: number;
+  title: string;
+  stock: number;
+};
+
+async function getBookList() {
+  const res = await fetch('http://localhost:5000/books', { cache: 'no-store' });
+  return res.json();
+}
+
+export default async function BookList() {
+  const books: Book[] = await getBookList();
+
   return (
-    <>
-      <h2 className='text-4xl'>Book List</h2>
-    </>
+    <div className='p-10 bg-indigo-200 text-indigo-900'>
+      <table className='table w-full'>
+        <thead>
+          <tr>
+            <td>No</td>
+            <td>Id</td>
+            <td>Book Title</td>
+            <td>Stock</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map((book, index) => (
+            <tr key={book.id}>
+              <td>{index + 1}</td>
+              <td>{book.id}</td>
+              <td>{book.title}</td>
+              <td>{book.stock}</td>
+              <td></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

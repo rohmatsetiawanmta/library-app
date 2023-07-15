@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='bg-indigo-900 text-indigo-200 min-h-screen flex items-center justify-center antialiased tracking-tight'>{children}</div>
+        <div className='bg-indigo-900 min-h-screen antialiased tracking-tight'>{children}</div>
       </body>
     </html>
   );

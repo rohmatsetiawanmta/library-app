@@ -1,0 +1,19 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Ada Apa dengan Cinta?",
+      "stock": 5
+    },
+    {
+      "id": 2,
+      "title": "Laskar Pelangi",
+      "stock": 3
+    },
+    {
+      "id": 3,
+      "title": "5 cm",
+      "stock": 4
+    }
+  ]
+}
